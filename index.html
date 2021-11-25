@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Music</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.js"></script>
+  </head>
+  <body>
+    <script src="galaxyManager.js"></script>
+    <script src="script.js"></script>
+    <div class="cover" id="hidable">
+      <!--<h1 id="hidable" class="title"><strong>Audio  Visualizer</strong></h1>-->
+      <button class="startbutton" id="toggle">START VISUALIZER</button>
+    </div>
+    
+    <script>
+      const targetDiv = document.getElementById("hidable");
+      const btn = document.getElementById("toggle");
+      btn.onclick = function () {
+        if (targetDiv.style.display !== "none") {
+          targetDiv.style.display = "none";
+        } else {
+          targetDiv.style.display = "block";
+        }
+      };
+    </script>
+    
+  </body>
+</html>
